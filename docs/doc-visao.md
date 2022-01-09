@@ -1,75 +1,123 @@
-# Documento de Visão
+### UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE
 
-Documento construído a partido do **Modelo BSI - Doc 001 - Documento de Visão** que pode ser encontrado no
-link: https://docs.google.com/document/d/1DPBcyGHgflmz5RDsZQ2X8KVBPoEF5PdAz9BBNFyLa6A/edit?usp=sharing
+### CENTRO DE ENSINO SUPERIOR DO SERIDÓ
 
-## Equipe e Definição de Papéis
+### DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA
 
-Membro     |     Papel   |   E-mail   |
----------  | ----------- | ---------- |
-Antônio    | Cliente Professor  | taciano@bsi.ufrn.br
-Dafine     | Cliente (Diretora) | sandra@ceres.ufrn.br
-Fernando         | Analista, Testador | ze@silva.com
-Tiago      | Gerente, Desenvolvedor | maria@silva.com
+### CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO
 
-### Matriz de Competências
+#### EQUIPE Devs_Cansados
 
-Membro     |     Competências   |
----------  | ----------- |
-Taciano    | Desenvolvedor Java, Junit, Eclipse, JSP, JSF, Hibernate, Matemática, Latex, etc |
-Sandra     | Gestão, Geográfa |
-Zé         | Desenvolvedor Java, Astrofísico |
-Maria      | Gestão, Desenvolvedor Java, Pesquisadora em Engenharia de Software |
+**Antonio Fernandes**
 
-## Perfis dos Usuários
+**Dafne Moretti Moreira**
 
-O sistema poderá ser utilizado por diversos usuários. Temos os seguintes perfis/atores:
+**Fernando José dos Santos**
 
-Perfil                                 | Descrição   |
----------                              | ----------- |
-Administrador | Este usuário realiza os cadastros base e pode realizar qualquer função.
-Docentes | Este usuário pode verificar seu horário, e acessar turmas, estruturas curriculares, lista de alunos nas turmas, cadastrar enquetes e ver resultados, etc
-Discente | Este usuário pode verificar o plano de aulas (horários), demosntrar interesse em uma turma, e acessar turmas, a estrutura do curso, responder enquetes, etc.
+**Tiago José Vieira de Oliveira**
 
-## Lista de Requisitos Funcionais
+# to-do_TS: Documento de Visão
 
-Requisito                                 | Descrição   | Ator |
----------                                 | ----------- | ---------- |
-RF001 - Manter um cadastro de Centros     | Um centro representa uma unidade administrativa da Universidade. Um centro tem código, nome, sigla, endereço e site. | Administrador |
-RF002 - Manter um cadastro de Departamentos | Um departamento tem código, nome, sigla, endereço e o centro a qual pertence. | Administrador |
-RF003 - Manter o cadastro de Salas | Uma sala tem um número, um nome, capacidade, tamanho, bloco e o centro a qual pertence. | Administrador |
-RF004 - Manter cadastro de Componentes Curriculares | Um componente curricular é de um tipo de componente. Um componente curricular tem: código, nome, ementa, departamento, carga horária e modalidade, equivalências e requisitos com outros componentes, data de criação. | Administrador |
-RF005 - Manter o cadastro de Horários de Aula | Um horário tem: um dia de semana, um turno, uma ordem (ordenação/identificador), uma hora de início, uma hora de final | Administrador |
-RF006 - Manter o cadastro de professores | um professor tem: matrícula, nome, e-mail, telefone e o departamento | Administrador |
-RF007 - Manter cadastro de Turmas | Uma turma tem: código, professor, sala e horários (horário da turma). Uma turma é de um componente curricular. Uma turma tem um ou mais professores. Uma turma tem uma ou mais salas. Uma turma tem vários horários de aulas. | Chefes e Coordenadores |
+## 1. Introdução
 
-### Modelo Conceitual
+## Equipe e definição de papéis
 
-Abaixo apresentamos o modelo conceitual usando o **YUML**.
+| Membro                        | Papel                     | Email                           |
+| ----------------------------- | ------------------------- | ------------------------------- |
+| Antonio Fernandes             | Analista,Testador         | antoniofern.n@gmail.com         |
+| Dafne Moretti Moreira         | Desenvolvedora, testadora | moretti.dafne2@gmail.com        |
+| Fernando José dos Santos      | Testador                  | fernando.santos.066@ufrn.edu.br |
+| Tiago José Vieira de Oliveira | Desenvolvedor,testador    | tiago_jvo@outlook.com           |
 
- ![Modelo UML](yuml/monitoria-modelo.png)
+## Matriz de Competências
 
-O código que gera o diagrama está [Aqui!](yuml/monitoria-yuml.md). O detalhamento dos modelos conceitual e de dados do projeto estão no [Documento de Modelos](doc-modelos.md).
+| Membro                   | Competências                                  |
+| ------------------------ | --------------------------------------------- |
+| Antonio Fernandes        | HTML, CSS, Javascript, NodeJS, React, MongoDB |
+| Dafne Moretti Moreira    | Gestão, HTML, CSS, JavaScript, React, Angular |
+| Fernando José dos Santos | Python,HTML, CSS, JS, TS, React               |
+| Tiago José dos Santos    | HTML, CSS, JS, TS, Node                       |
 
-#### Descrição das Entidades
+### 1.1 Propósito do documento de requisitos
 
-## Lista de Requisitos Não-Funcionais
+Este documento visa a apresentação do sistema **to-do_TS** produzido pela equipe **Devs_Cansados**. Este documento contém todos os requisitos bem como seu escopo e demais informações relevantes para a implementação deste projeto.
 
-Requisito                                 | Descrição   |
----------                                 | ----------- |
-RNF001 - Deve ser acessível via navegador | Deve abrir perfeitamento no Firefox e no Chrome. |
-RNF002 - Consultas deve ser eficiente | O sistema deve executar as consultas em milessegundos |
-RNF003 - Log e histórico de acesso e funções | Deve manter um log de todos os acessos e das funções executadas pelo usuário |
+### 1.2 Escopo do Produto
 
-## Riscos
+O sistema to-do_TS será usado na disciplina de testes de software.
 
-Tabela com o mapeamento dos riscos do projeto, as possíveis soluções e os responsáveis.
+## 2. Descrição Geral
 
-Data | Risco | Prioridade | Responsável | Status | Providência/Solução |
------- | ------ | ------ | ------ | ------ | ------ |
-10/03/2018 | Não aprendizado das ferramentas utilizadas pelos componentes do grupo | Alta | Todos | Vigente | Reforçar estudos sobre as ferramentas e aulas com a integrante que conhece a ferramenta |
-10/03/2018 | Ausência por qualquer motivo do cliente | Média | Gerente | Vigente | Planejar o cronograma tendo em base a agenda do cliente |
-10/03/2018 | Divisão de tarefas mal sucedida | Baixa | Gerente | Vigente | Acompanhar de perto o desenvolvimento de cada membro da equipe |
-10/03/2018 | Implementação de protótipo com as tecnologias | Alto | Todos | Resolvido | Encontrar tutorial com a maioria da tecnologia e implementar um caso base do sistema |
+O sistema to-do_TS foi criado para ajudar a um usuário para agendar suas tarefas.
 
-### Referências
+### 2.1 Requisitos Funcionais
+
+| Requisito                         | Descrição                                                      | Ator    |
+| --------------------------------- | -------------------------------------------------------------- | ------- |
+| RF01 - Cadastrar usuários         | Requisito para a criação de usuários.                          | Usuário |
+| RF02 - Atualizar dados do usuário | Requisito para atualizar dados sobre o Usuário.                | Usuário |
+| RF03 - Excluir o usuário;         | Requisito de exclusão de um Usuário.                           | Usuário |
+| RF04 - Ver dados do usuário       | Requisito para exibir os dados do Usuário.                     | Usuário |
+| RF05 - Realizar login             | Requisito para realizar login no sistema.                      | Usuário |
+| RF06 - Recuperar senha do usuário | Requisito para recuperar senha de um Usuário                   | Usuário |
+| RF07 - Cadastrar tarefas          | Requisito para a criação de tarefas no sistema.                | Usuário |
+| RF08 - Exibir tarefas             | Requisito para exibir os dados dos tarefas.                    | Usuário |
+| RF09 - Atualizar tarefas          | Requisito para atualizar dados sobre os tarefas.               | Usuário |
+| RF10 - Excluir tarefas            | Requisito de exclusão de uma tarefa.                             | Usuário |
+| RF11 - Marcar tarefa              | Requisito de marcar tarefa como favorita.                      | Usuário |
+| RF12 - Filtrar tarefas            | Requisito de filtrar as tarefas por um campo especifico.       | Usuário |
+| RF13 - Criar categoria            | Requisito de criar categorias para definir nas tarefas.        | Usuário |
+| RF14 - Alterar categoria          | Requisito de alterar as informações de categorias.             | Usuário |
+| RF15 - Visualizar categoria       | Requisito de visualizar as informações de categorias.          | Usuário |
+| RF16 - Exclui categoria           | Requisito de exclui uma categoria.                             | Usuário |
+| RF17 - Criar comentário           | Requisito de criar comentário para tarefa.                     | Usuário |
+| RF18 - Alterar categoria          | Requisito de alterar comentário para tarefa.                   | Usuário |
+| RF19 - Visualizar categoria       | Requisito de visualizar comentário para tarefa.                | Usuário |
+| RF20 - Exclui categoria           | Requisito de exclui comentário para tarefa.                    | Usuário |
+
+### 2.2 Requisitos não-funcionais
+
+| Requisito                                     | Descrição                                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------------------------- |
+| RNF001 - Conexão com a internet               | Deve manter uma conexão ativa com a Internet.                                         |
+| RNF002 - Sistema operacional Windows ou Linux | O computador deve ter como Sistema Operacional uma dessas 2 opções.                   |
+| RNF003 - Deve ser acessível via navegador     | Deve abrir perfeitamente nos principais navegadores de internet, Firefox e no Chrome. |
+
+### 2.3 Perfis dos usuários
+
+O Sistema será usado por apenas 1 tipo de usuários.
+
+**Administrador**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O usuário poderá cadastrar suas tarefas diárias.
+
+### 2.4 Riscos
+
+O objetivo desta seção é o de produzir uma lista de riscos identificados em todas as fases do projeto e possíveis ações que poderiam ser tomadas para minimizar seus impactos.
+
+1. Riscos de Gerenciamento
+   | CÓDIGO | Risco | Plano de Ação |
+   | ------ | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+   | RS01 | Sistema não estar alinhado com o negócio | Elaborar uma documentação detalhada e levantamento de requisitos de qualidade |
+   | RS02 | Tempo necessário pra codificação for insuficiente. | Planejar e estimar com antecedência o tempo de cada fase do projeto |
+   | RS03 | Cliente pedir novas funcionalidades | Aumentar o tempo para a entrega |
+   | RS04 | Membro da equipe ficar doente por mais de 2 dias | Realocar as tarefas do membro pra equipe para os demais membros |
+   | RS05 | Falta de suporte técnico pós implantação | Inclusão desta cláusula no contrato |
+   | RS06 | Falta de preparo técnico dos funcionários na utilização do sistema | Criar um programa de treinamentos para todas as pessoas que irão utilizar o sistema |
+2. Riscos de Externos
+   | CÓDIGO | Risco | Plano de Ação |
+   | ------ | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+   | RS07 | Danos causados nos equipamentos por ações externas | Ter uma backup de dados na máquina e outra fonte externa e realizar backups diários. Utilizar no-breaks com baterias em boas condições |
+   | |
+3. Riscos Tecnológicos
+   | CÓDIGO | Risco | Plano de Ação |
+   | ------ | ------------------------------------ | ------------------------------------------ |
+   | RS08 | Testes do sistema não serem efetivos | Criar um planejamento detalhado dos testes |
+
+## 3. Histórico de Revisões
+
+| Data       | Versão | Descrição         | Autor             |
+| ---------- | ------ | ----------------- | ----------------- |
+| 17/11/2021 | 0.0.1  | Documento Inicial | **Devs_Cansados** |
+| 07/01/2022 | 0.0.2  | Documento Inicial | **Devs_Cansados** |
+|            |        |                   |                   |
